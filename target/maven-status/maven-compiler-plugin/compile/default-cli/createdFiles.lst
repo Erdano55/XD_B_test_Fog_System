@@ -1,0 +1,17 @@
+com\example\fog\service\AirQualityService.class
+com\example\fog\service\DashboardService.class
+com\example\fog\dto\AirQualityDTO.class
+com\example\fog\dto\LocationDTO.class
+com\example\fog\dto\LocationDTO$LocationDTOBuilder.class
+com\example\fog\FogDetectionApplication.class
+com\example\fog\dto\DashboardDTO.class
+com\example\fog\service\LocationService.class
+com\example\fog\dto\WeatherNowDTO.class
+com\example\fog\config\RestTemplateConfig.class
+com\example\fog\dto\DashboardDTO$DashboardDTOBuilder.class
+com\example\fog\dto\AirQualityDTO$AirQualityDTOBuilder.class
+com\example\fog\service\WeatherService.class
+com\example\fog\dto\Forecast7DTO.class
+com\example\fog\dto\Forecast7DTO$Forecast7DTOBuilder.class
+com\example\fog\controller\DashboardController.class
+com\example\fog\dto\WeatherNowDTO$WeatherNowDTOBuilder.class

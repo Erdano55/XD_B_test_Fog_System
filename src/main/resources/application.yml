@@ -1,0 +1,19 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: fog-detection-system
+
+weather:
+  qweather:
+    key: faf1ba64a3774ec49b8621ceb9a205b9
+    now-url: "https://devapi.qweather.com/v7/weather/now"
+    air-url: "https://devapi.qweather.com/v7/air/now"
+  forecast:
+    url: http://gfeljm.tianqiapi.com/api
+    appid: 67225125
+    appsecret: 0LQFwmA3
+
+location:
+  ip-api-url: "http://ip-api.com/json/?lang=zh-CN&fields=status,message,country,countryCode,regionName,city,lat,lon,query"

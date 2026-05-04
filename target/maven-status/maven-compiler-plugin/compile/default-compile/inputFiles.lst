@@ -1,0 +1,12 @@
+D:\APP\javacode\Haze_Detection_System\src\main\java\com\example\fog\config\RestTemplateConfig.java
+D:\APP\javacode\Haze_Detection_System\src\main\java\com\example\fog\controller\DashboardController.java
+D:\APP\javacode\Haze_Detection_System\src\main\java\com\example\fog\dto\AirQualityDTO.java
+D:\APP\javacode\Haze_Detection_System\src\main\java\com\example\fog\dto\DashboardDTO.java
+D:\APP\javacode\Haze_Detection_System\src\main\java\com\example\fog\dto\Forecast7DTO.java
+D:\APP\javacode\Haze_Detection_System\src\main\java\com\example\fog\dto\LocationDTO.java
+D:\APP\javacode\Haze_Detection_System\src\main\java\com\example\fog\dto\WeatherNowDTO.java
+D:\APP\javacode\Haze_Detection_System\src\main\java\com\example\fog\FogDetectionApplication.java
+D:\APP\javacode\Haze_Detection_System\src\main\java\com\example\fog\service\AirQualityService.java
+D:\APP\javacode\Haze_Detection_System\src\main\java\com\example\fog\service\DashboardService.java
+D:\APP\javacode\Haze_Detection_System\src\main\java\com\example\fog\service\LocationService.java
+D:\APP\javacode\Haze_Detection_System\src\main\java\com\example\fog\service\WeatherService.java

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>雾霾探测系统</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<main class="page-shell">
+    <section class="hero-panel">
+        <div class="hero-copy">
+            <p class="eyebrow"><i class="fa-solid fa-wind"></i> Fog Detection Dashboard</p>
+            <h1>雾霾探测系统</h1>
+            <p class="hero-desc">基于公网 IP 定位、实时天气、空气质量与 7 日趋势的 Web 实验展示平台。</p>
+            <div class="hero-meta">
+                <span><i class="fa-solid fa-location-dot"></i><strong id="city">定位中</strong><em id="country">--</em></span>
+                <span><i class="fa-regular fa-clock"></i>更新于 <strong id="updatedAt">--</strong></span>
+            </div>
+        </div>
+
+        <div class="weather-card">
+            <div class="weather-icon"><i class="fa-solid fa-cloud-sun"></i></div>
+            <div>
+                <span class="label">当前天气</span>
+                <strong id="weatherText">--</strong>
+            </div>
+            <div class="temperature"><span id="temperature">--</span><small>℃</small></div>
+            <button id="refreshBtn" class="refresh-btn" type="button">
+                <i class="fa-solid fa-rotate-right"></i>
+                刷新数据
+            </button>
+        </div>
+    </section>
+
+    <section id="loading" class="state-card">
+        <span class="spinner"></span>
+        <div>
+            <strong>正在获取监测数据</strong>
+            <p>正在同步定位、天气与空气质量信息...</p>
+        </div>
+    </section>
+
+    <section id="error" class="state-card error hidden">
+        <i class="fa-solid fa-circle-exclamation"></i>
+        <div>
+            <strong>部分数据加载失败</strong>
+            <p id="errorText">数据获取失败，请稍后重试</p>
+        </div>
+    </section>
+
+    <section class="overview-grid">
+        <article class="aqi-card glass-card">
+            <div class="section-kicker">Air Quality Index</div>
+            <div class="aqi-main">
+                <div>
+                    <span class="label">实时 AQI</span>
+                    <strong id="aqi">--</strong>
+                </div>
+                <span id="category" class="quality-badge">--</span>
+            </div>
+            <p id="aqiAdvice" class="advice">等待空气质量数据返回...</p>
+            <div class="aqi-scale" aria-hidden="true">
+                <span></span><span></span><span></span><span></span><span></span>
+            </div>
+        </article>
+
+        <article class="summary-card glass-card">
+            <div class="summary-icon"><i class="fa-solid fa-smog"></i></div>
+            <div>
+                <span class="label">监测主题</span>
+                <strong>雾霾与污染物探测</strong>
+                <p>展示 PM2.5、SO2、NO2、CO、O3 等关键污染指标，辅助判断当前空气状态。</p>
+            </div>
+        </article>
+    </section>
+
+    <section class="pollutant-section">
+        <div class="section-heading">
+            <div>
+                <span class="section-kicker">Pollutants</span>
+                <h2>污染物指标</h2>
+            </div>
+            <p>数值越高代表该污染物浓度越需要关注。</p>
+        </div>
+
+        <div class="pollutant-grid">
+            <article class="pollutant-card">
+                <span>PM2.5</span>
+                <strong id="pm25">--</strong>
+                <p>细颗粒物</p>
+            </article>
+            <article class="pollutant-card">
+                <span>SO2</span>
+                <strong id="so2">--</strong>
+                <p>二氧化硫</p>
+            </article>
+            <article class="pollutant-card">
+                <span>NO2</span>
+                <strong id="no2">--</strong>
+                <p>二氧化氮</p>
+            </article>
+            <article class="pollutant-card">
+                <span>CO</span>
+                <strong id="co">--</strong>
+                <p>一氧化碳</p>
+            </article>
+            <article class="pollutant-card">
+                <span>O3</span>
+                <strong id="o3">--</strong>
+                <p>臭氧</p>
+            </article>
+        </div>
+    </section>
+
+    <section class="chart-section glass-card">
+        <div class="section-heading">
+            <div>
+                <span class="section-kicker">Forecast Trend</span>
+                <h2>未来 7 日天气趋势</h2>
+            </div>
+            <p>最高温、最低温与湿度变化</p>
+        </div>
+        <div id="trendChart" class="chart"></div>
+    </section>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+<script src="/js/index.js"></script>
+</body>
+</html>
