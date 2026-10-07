@@ -1,4 +1,4 @@
-# 雾霾探测系统（Fog Detection System）
+# 西电B测-雾霾探测系统（Fog Detection System
 
 ## 项目简介
 
